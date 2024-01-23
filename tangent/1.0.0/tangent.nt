@@ -41,4 +41,491 @@
 # http://purl.org/ontology/bibo/status
 <http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasCall
+<https://knowledge.c-innovationhub.com/tangent/schema#hasCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasCall> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#ServiceJourney> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasCall> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/tangent/schema#Call> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek
+<https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#DayType> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasDayType
+<https://knowledge.c-innovationhub.com/tangent/schema#hasDayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasDayType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#ServiceCalendar> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasDayType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mobility/transmodel/journeys#DayType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType
+<https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#Geometry> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/tangent/schema#GeometryType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass
+<https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Wind> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass> <http://www.w3.org/2000/01/rdf-schema#range> <http://datex2.eu/vocab/3/Common/DirectionCompassEnum> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasPoint
+<https://knowledge.c-innovationhub.com/tangent/schema#hasPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PointLocation> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation
+<https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://datex2.eu/vocab/3/LocationReferencing/PointLocation> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType
+<https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasStopType
+<https://knowledge.c-innovationhub.com/tangent/schema#hasStopType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasStopType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasStopType> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode
+<https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#Line> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/tangent/schema#TransportMode> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass
+<https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Wind> .
+<https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass> <http://www.w3.org/2000/01/rdf-schema#range> <http://datex2.eu/vocab/3/Common/DirectionCompassEnum> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#refersToLine
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#ServiceJourney> .
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mobility/transmodel/journeys#Line> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#Call> .
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#ServiceJourney> .
+<https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mobility/transmodel/journeys#ServiceCalendar> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#airTemperature
+<https://knowledge.c-innovationhub.com/tangent/schema#airTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#airTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Temperature> .
+<https://knowledge.c-innovationhub.com/tangent/schema#airTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#areaName
+<https://knowledge.c-innovationhub.com/tangent/schema#areaName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#areaName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/NamedArea> .
+<https://knowledge.c-innovationhub.com/tangent/schema#areaName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#causeDescription
+<https://knowledge.c-innovationhub.com/tangent/schema#causeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#causeDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Situation/Cause> .
+<https://knowledge.c-innovationhub.com/tangent/schema#causeDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType
+<https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Situation/Cause> .
+<https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass
+<https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PointLocation> .
+<https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees
+<https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PointLocation> .
+<https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod
+<https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Period> .
+<https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#forecast
+<https://knowledge.c-innovationhub.com/tangent/schema#forecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#forecast> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#forecast> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity> .
+<https://knowledge.c-innovationhub.com/tangent/schema#forecast> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime
+<https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData> .
+<https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#isAvailable
+<https://knowledge.c-innovationhub.com/tangent/schema#isAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#isAvailable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mobility/transmodel/journeys#ServiceCalendar> .
+<https://knowledge.c-innovationhub.com/tangent/schema#isAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint
+<https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PointLocation> .
+<https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected
+<https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription> .
+<https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#locationIndex
+<https://knowledge.c-innovationhub.com/tangent/schema#locationIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#locationIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PointLocation> .
+<https://knowledge.c-innovationhub.com/tangent/schema#locationIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature
+<https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Temperature> .
+<https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed
+<https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Wind> .
+<https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature
+<https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Temperature> .
+<https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation
+<https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation> .
+<https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime
+<https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData> .
+<https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#order
+<https://knowledge.c-innovationhub.com/tangent/schema#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#order> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#Call> .
+<https://knowledge.c-innovationhub.com/tangent/schema#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime
+<https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/OverallPeriod> .
+<https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime
+<https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/OverallPeriod> .
+<https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#overrunning
+<https://knowledge.c-innovationhub.com/tangent/schema#overrunning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#overrunning> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Validity> .
+<https://knowledge.c-innovationhub.com/tangent/schema#overrunning> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription
+<https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary> .
+<https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName
+<https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary> .
+<https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#publicCode
+<https://knowledge.c-innovationhub.com/tangent/schema#publicCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#publicCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
+<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference
+<https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Situation/SituationRecord> .
+<https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime
+<https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Situation/SituationRecord> .
+<https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod
+<https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Period> .
+<https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#timeValue
+<https://knowledge.c-innovationhub.com/tangent/schema#timeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#timeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime> .
+<https://knowledge.c-innovationhub.com/tangent/schema#timeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#travelTime
+<https://knowledge.c-innovationhub.com/tangent/schema#travelTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#travelTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData> .
+<https://knowledge.c-innovationhub.com/tangent/schema#travelTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay
+<https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData> .
+<https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#windSpeed
+<https://knowledge.c-innovationhub.com/tangent/schema#windSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/tangent/schema#windSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Common/Wind> .
+<https://knowledge.c-innovationhub.com/tangent/schema#windSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://datex2.eu/vocab/3/Common/DirectionCompassEnum
+<http://datex2.eu/vocab/3/Common/DirectionCompassEnum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Common/OverallPeriod
+<http://datex2.eu/vocab/3/Common/OverallPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Common/Period
+<http://datex2.eu/vocab/3/Common/Period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Common/Temperature
+<http://datex2.eu/vocab/3/Common/Temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Common/Validity
+<http://datex2.eu/vocab/3/Common/Validity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Common/Wind
+<http://datex2.eu/vocab/3/Common/Wind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/LocationReferencing/NamedArea
+<http://datex2.eu/vocab/3/LocationReferencing/NamedArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/LocationReferencing/PointLocation
+<http://datex2.eu/vocab/3/LocationReferencing/PointLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary
+<http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription
+<http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime
+<http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation
+<http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity
+<http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData
+<http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Situation/Cause
+<http://datex2.eu/vocab/3/Situation/Cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://datex2.eu/vocab/3/Situation/SituationRecord
+<http://datex2.eu/vocab/3/Situation/SituationRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#Call
+<https://knowledge.c-innovationhub.com/tangent/schema#Call> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek
+<https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#GeometryType
+<https://knowledge.c-innovationhub.com/tangent/schema#GeometryType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment
+<https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType
+<https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#StopType
+<https://knowledge.c-innovationhub.com/tangent/schema#StopType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#TransportMode
+<https://knowledge.c-innovationhub.com/tangent/schema#TransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mobility/transmodel/journeys#DayType
+<https://w3id.org/mobility/transmodel/journeys#DayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mobility/transmodel/journeys#Line
+<https://w3id.org/mobility/transmodel/journeys#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint
+<https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mobility/transmodel/journeys#ServiceCalendar
+<https://w3id.org/mobility/transmodel/journeys#ServiceCalendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mobility/transmodel/journeys#ServiceJourney
+<https://w3id.org/mobility/transmodel/journeys#ServiceJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#Polygon
+<https://knowledge.c-innovationhub.com/tangent/schema#Polygon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#Polygon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#GeometryType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#airport
+<https://knowledge.c-innovationhub.com/tangent/schema#airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#bus
+<https://knowledge.c-innovationhub.com/tangent/schema#bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#TransportMode> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#busStation
+<https://knowledge.c-innovationhub.com/tangent/schema#busStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#busStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#cctv
+<https://knowledge.c-innovationhub.com/tangent/schema#cctv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#cctv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#coachStation
+<https://knowledge.c-innovationhub.com/tangent/schema#coachStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#coachStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#ferryPort
+<https://knowledge.c-innovationhub.com/tangent/schema#ferryPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#ferryPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#ferryStop
+<https://knowledge.c-innovationhub.com/tangent/schema#ferryStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#ferryStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#friday
+<https://knowledge.c-innovationhub.com/tangent/schema#friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#harbourPort
+<https://knowledge.c-innovationhub.com/tangent/schema#harbourPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#harbourPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#liftStation
+<https://knowledge.c-innovationhub.com/tangent/schema#liftStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#liftStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#metroStation
+<https://knowledge.c-innovationhub.com/tangent/schema#metroStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#metroStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#monday
+<https://knowledge.c-innovationhub.com/tangent/schema#monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus
+<https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram
+<https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#other
+<https://knowledge.c-innovationhub.com/tangent/schema#other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#railStation
+<https://knowledge.c-innovationhub.com/tangent/schema#railStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#railStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#rsu
+<https://knowledge.c-innovationhub.com/tangent/schema#rsu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#rsu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#saturday
+<https://knowledge.c-innovationhub.com/tangent/schema#saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#sunday
+<https://knowledge.c-innovationhub.com/tangent/schema#sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#taxiRank
+<https://knowledge.c-innovationhub.com/tangent/schema#taxiRank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#taxiRank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#thursday
+<https://knowledge.c-innovationhub.com/tangent/schema#thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter
+<https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#tramStation
+<https://knowledge.c-innovationhub.com/tangent/schema#tramStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#tramStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#tuesday
+<https://knowledge.c-innovationhub.com/tangent/schema#tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#unknown
+<https://knowledge.c-innovationhub.com/tangent/schema#unknown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#unknown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange
+<https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#StopType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#vms
+<https://knowledge.c-innovationhub.com/tangent/schema#vms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#vms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType> .
+# 
+# https://knowledge.c-innovationhub.com/tangent/schema#wednesday
+<https://knowledge.c-innovationhub.com/tangent/schema#wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/tangent/schema#wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek> .
+# 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

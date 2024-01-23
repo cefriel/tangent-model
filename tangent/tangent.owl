@@ -1,33 +1,645 @@
 @prefix : <https://knowledge.c-innovationhub.com/tangent/schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix siri: <https://knowledge.c-innovationhub.com/siri#> .
-@prefix tangent: <https://knowledge.c-innovationhub.com/tangent/schema#> .
-@prefix sf: <http://www.opengis.net/ont/sf#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix dxvms: <http://datex2.eu/vocab/3/Vms/> .
-@prefix dxcommon: <http://datex2.eu/vocab/3/Common/> . 
+@prefix tmcom: <https://w3id.org/mobility/transmodel/commons#> .
+@prefix tmjou: <https://w3id.org/mobility/transmodel/journeys#> .
+@prefix tmorg: <https://w3id.org/mobility/transmodel/organisations#> .
+@prefix tangent: <https://knowledge.c-innovationhub.com/tangent/schema#> .
+@prefix dxcommon: <http://datex2.eu/vocab/3/Common/> .
 @prefix dxpayload: <http://datex2.eu/vocab/3/D2Payload/> .
-@prefix dxsituation: <http://datex2.eu/vocab/3/Situation/> .
 @prefix dxtraffic: <http://datex2.eu/vocab/3/RoadTrafficData/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @prefix dxlocation: <http://datex2.eu/vocab/3/LocationReferencing/> .
+@prefix dxsituation: <http://datex2.eu/vocab/3/Situation/> .
 @base <https://knowledge.c-innovationhub.com/tangent/schema#> .
 
+<https://knowledge.c-innovationhub.com/tangent/schema> rdf:type owl:Ontology ;
+                                                        owl:versionIRI <https://knowledge.c-innovationhub.com/tangent/schema/1.0.0> ;
+                                                        dct:contributor "The definition of the TANGENT ontology is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme."@en ;
+                                                        dct:creator "Mario Scrocca (Cefriel)"@en ,
+                                                                    "Valentina Carriero (Cefriel)"@en ;
+                                                        dct:description "TANGENT ontology for the TANGENT Reference Conceptual Model."@en ;
+                                                        dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                        dct:publisher "Cefriel"@en ;
+                                                        dct:title "TANGENT ontology"@en ;
+                                                        <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+                                                        rdfs:comment "TANGENT ontology for the TANGENT Reference Conceptual Model." ;
+                                                        rdfs:label "TANGENT ontology" ;
+                                                        owl:versionInfo "1.0.0"@en .
 
-<https://knowledge.c-innovationhub.com/tangent/schema> rdf:type owl:Ontology;
-        owl:versionIRI <https://knowledge.c-innovationhub.com/tangent/schema/1.0.0> ;
-        dct:contributor "The definition of the TANGENT ontology is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme."@en ;
-        dct:creator "Valentina Carriero (Cefriel)"@en ,
-                    "Mario Scrocca (Cefriel)"@en ;
-        dct:description "TANGENT ontology for the TANGENT Reference Conceptual Model."@en ;
-        dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-        dct:publisher "Cefriel"@en ;
-        dct:title "TANGENT ontology"@en ;
-        <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
-        rdfs:comment "TANGENT ontology for the TANGENT Reference Conceptual Model." ;
-        rdfs:label "TANGENT ontology" ;
-        owl:versionInfo "1.0.0"@en .
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasCall
+tangent:hasCall rdf:type owl:ObjectProperty ;
+                rdfs:domain tmjou:ServiceJourney ;
+                rdfs:range tangent:Call .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek
+tangent:hasDayOfWeek rdf:type owl:ObjectProperty ;
+                     rdfs:domain tmjou:DayType ;
+                     rdfs:range tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasDayType
+tangent:hasDayType rdf:type owl:ObjectProperty ;
+                   rdfs:domain tmjou:ServiceCalendar ;
+                   rdfs:range tmjou:DayType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType
+tangent:hasGeometryType rdf:type owl:ObjectProperty ;
+                        rdfs:domain geosparql:Geometry ;
+                        rdfs:range tangent:GeometryType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass
+tangent:hasMaximumWindDirectionCompass rdf:type owl:ObjectProperty ;
+                                       rdfs:domain dxcommon:Wind ;
+                                       rdfs:range dxcommon:DirectionCompassEnum .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasPoint
+tangent:hasPoint rdf:type owl:ObjectProperty ;
+                 rdfs:domain dxlocation:PointLocation ;
+                 rdfs:range geo:Point .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation
+tangent:hasRoadEquipmentLocation rdf:type owl:ObjectProperty ;
+                                 rdfs:domain tangent:RoadEquipment ;
+                                 rdfs:range dxlocation:PointLocation .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType
+tangent:hasRoadEquipmentType rdf:type owl:ObjectProperty ;
+                             rdfs:domain tangent:RoadEquipment ;
+                             rdfs:range tangent:RoadEquipmentType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasStopType
+tangent:hasStopType rdf:type owl:ObjectProperty ;
+                    rdfs:domain tmjou:ScheduledStopPoint ;
+                    rdfs:range tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode
+tangent:hasTransportMode rdf:type owl:ObjectProperty ;
+                         rdfs:domain tmjou:Line ;
+                         rdfs:range tangent:TransportMode .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass
+tangent:hasWindDirectionCompass rdf:type owl:ObjectProperty ;
+                                rdfs:domain dxcommon:Wind ;
+                                rdfs:range dxcommon:DirectionCompassEnum .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#refersToLine
+tangent:refersToLine rdf:type owl:ObjectProperty ;
+                     rdfs:domain tmjou:ServiceJourney ;
+                     rdfs:range tmjou:Line .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint
+tangent:refersToScheduledStopPoint rdf:type owl:ObjectProperty ;
+                                   rdfs:domain tangent:Call ;
+                                   rdfs:range tmjou:ScheduledStopPoint .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar
+tangent:refersToServiceCalendar rdf:type owl:ObjectProperty ;
+                                rdfs:domain tmjou:ServiceJourney ;
+                                rdfs:range tmjou:ServiceCalendar .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#airTemperature
+tangent:airTemperature rdf:type owl:DatatypeProperty ;
+                       rdfs:domain dxcommon:Temperature ;
+                       rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#areaName
+tangent:areaName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain dxlocation:NamedArea ;
+                 rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#causeDescription
+tangent:causeDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain dxsituation:Cause ;
+                         rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType
+tangent:detailedCauseType rdf:type owl:DatatypeProperty ;
+                          rdfs:domain dxsituation:Cause ;
+                          rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass
+tangent:directionByCompass rdf:type owl:DatatypeProperty ;
+                           rdfs:domain dxlocation:PointLocation ;
+                           rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees
+tangent:directionByDegrees rdf:type owl:DatatypeProperty ;
+                           rdfs:domain dxlocation:PointLocation ;
+                           rdfs:range xsd:integer .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod
+tangent:endOfPeriod rdf:type owl:DatatypeProperty ;
+                    rdfs:domain dxcommon:Period ;
+                    rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#forecast
+tangent:forecast rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain dxtraffic:SinglePhysicalQuantity ;
+                 rdfs:range xsd:boolean .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime
+tangent:freeFlowTravelTime rdf:type owl:DatatypeProperty ;
+                           rdfs:domain dxtraffic:TravelTimeData ;
+                           rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#isAvailable
+tangent:isAvailable rdf:type owl:DatatypeProperty ;
+                    rdfs:domain tmjou:ServiceCalendar ;
+                    rdfs:range xsd:boolean .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint
+tangent:isLastPoint rdf:type owl:DatatypeProperty ;
+                    rdfs:domain dxlocation:PointLocation ;
+                    rdfs:range xsd:boolean .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected
+tangent:lengthAffected rdf:type owl:DatatypeProperty ;
+                       rdfs:domain dxlocation:SupplementaryPositionalDescription ;
+                       rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#locationIndex
+tangent:locationIndex rdf:type owl:DatatypeProperty ;
+                      rdfs:domain dxlocation:PointLocation ;
+                      rdfs:range xsd:integer .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature
+tangent:maximumTemperature rdf:type owl:DatatypeProperty ;
+                           rdfs:domain dxcommon:Temperature ;
+                           rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed
+tangent:maximumWindSpeed rdf:type owl:DatatypeProperty ;
+                         rdfs:domain dxcommon:Wind ;
+                         rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature
+tangent:minimumTemperature rdf:type owl:DatatypeProperty ;
+                           rdfs:domain dxcommon:Temperature ;
+                           rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation
+tangent:noPrecipitation rdf:type owl:DatatypeProperty ;
+                        rdfs:domain dxtraffic:PrecipitationInformation ;
+                        rdfs:range xsd:boolean .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime
+tangent:normallyExpectedTravelTime rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain dxtraffic:TravelTimeData ;
+                                   rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#order
+tangent:order rdf:type owl:DatatypeProperty ;
+              rdfs:domain tangent:Call ;
+              rdfs:range xsd:nonNegativeInteger .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime
+tangent:overallEndTime rdf:type owl:DatatypeProperty ;
+                       rdfs:domain dxcommon:OverallPeriod ;
+                       rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime
+tangent:overallStartTime rdf:type owl:DatatypeProperty ;
+                         rdfs:domain dxcommon:OverallPeriod ;
+                         rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#overrunning
+tangent:overrunning rdf:type owl:DatatypeProperty ;
+                    rdfs:domain dxcommon:Validity ;
+                    rdfs:range xsd:boolean .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription
+tangent:predefinedItineraryDescription rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain dxlocation:PredefinedItinerary ;
+                                       rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName
+tangent:predefinedItineraryName rdf:type owl:DatatypeProperty ;
+                                rdfs:domain dxlocation:PredefinedItinerary ;
+                                rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#publicCode
+tangent:publicCode rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription
+tangent:roadEquipmentDescription rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain tangent:RoadEquipment ;
+                                 rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId
+tangent:roadEquipmentId rdf:type owl:DatatypeProperty ;
+                        rdfs:domain tangent:RoadEquipment ;
+                        rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName
+tangent:roadEquipmentName rdf:type owl:DatatypeProperty ;
+                          rdfs:domain tangent:RoadEquipment ;
+                          rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference
+tangent:situationRecordCreationReference rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain dxsituation:SituationRecord ;
+                                         rdfs:range xsd:string .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime
+tangent:situationRecordObservationTime rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain dxsituation:SituationRecord ;
+                                       rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod
+tangent:startOfPeriod rdf:type owl:DatatypeProperty ;
+                      rdfs:domain dxcommon:Period ;
+                      rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#timeValue
+tangent:timeValue rdf:type owl:DatatypeProperty ;
+                  rdfs:domain dxtraffic:MeasurementOrCalculationTime ;
+                  rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#travelTime
+tangent:travelTime rdf:type owl:DatatypeProperty ;
+                   rdfs:domain dxtraffic:TravelTimeData ;
+                   rdfs:range xsd:dateTime .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay
+tangent:travelTimeDelay rdf:type owl:DatatypeProperty ;
+                        rdfs:domain dxtraffic:TravelTimeData ;
+                        rdfs:range xsd:float .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#windSpeed
+tangent:windSpeed rdf:type owl:DatatypeProperty ;
+                  rdfs:domain dxcommon:Wind ;
+                  rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://datex2.eu/vocab/3/Common/DirectionCompassEnum
+dxcommon:DirectionCompassEnum rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Common/OverallPeriod
+dxcommon:OverallPeriod rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Common/Period
+dxcommon:Period rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Common/Temperature
+dxcommon:Temperature rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Common/Validity
+dxcommon:Validity rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Common/Wind
+dxcommon:Wind rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/LocationReferencing/NamedArea
+dxlocation:NamedArea rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/LocationReferencing/PointLocation
+dxlocation:PointLocation rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary
+dxlocation:PredefinedItinerary rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription
+dxlocation:SupplementaryPositionalDescription rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime
+dxtraffic:MeasurementOrCalculationTime rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation
+dxtraffic:PrecipitationInformation rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity
+dxtraffic:SinglePhysicalQuantity rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData
+dxtraffic:TravelTimeData rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Situation/Cause
+dxsituation:Cause rdf:type owl:Class .
+
+
+###  http://datex2.eu/vocab/3/Situation/SituationRecord
+dxsituation:SituationRecord rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+geosparql:Geometry rdf:type owl:Class .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
+geo:Point rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#Call
+tangent:Call rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek
+tangent:DayOfWeek rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#GeometryType
+tangent:GeometryType rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment
+tangent:RoadEquipment rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType
+tangent:RoadEquipmentType rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#StopType
+tangent:StopType rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#TransportMode
+tangent:TransportMode rdf:type owl:Class .
+
+
+###  https://w3id.org/mobility/transmodel/journeys#DayType
+tmjou:DayType rdf:type owl:Class .
+
+
+###  https://w3id.org/mobility/transmodel/journeys#Line
+tmjou:Line rdf:type owl:Class .
+
+
+###  https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint
+tmjou:ScheduledStopPoint rdf:type owl:Class .
+
+
+###  https://w3id.org/mobility/transmodel/journeys#ServiceCalendar
+tmjou:ServiceCalendar rdf:type owl:Class .
+
+
+###  https://w3id.org/mobility/transmodel/journeys#ServiceJourney
+tmjou:ServiceJourney rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#Polygon
+tangent:Polygon rdf:type owl:NamedIndividual ,
+                         tangent:GeometryType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#airport
+tangent:airport rdf:type owl:NamedIndividual ,
+                         tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#bus
+tangent:bus rdf:type owl:NamedIndividual ,
+                     tangent:TransportMode .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#busStation
+tangent:busStation rdf:type owl:NamedIndividual ,
+                            tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#cctv
+tangent:cctv rdf:type owl:NamedIndividual ,
+                      tangent:RoadEquipmentType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#coachStation
+tangent:coachStation rdf:type owl:NamedIndividual ,
+                              tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#ferryPort
+tangent:ferryPort rdf:type owl:NamedIndividual ,
+                           tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#ferryStop
+tangent:ferryStop rdf:type owl:NamedIndividual ,
+                           tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#friday
+tangent:friday rdf:type owl:NamedIndividual ,
+                        tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#harbourPort
+tangent:harbourPort rdf:type owl:NamedIndividual ,
+                             tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#liftStation
+tangent:liftStation rdf:type owl:NamedIndividual ,
+                             tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#metroStation
+tangent:metroStation rdf:type owl:NamedIndividual ,
+                              tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#monday
+tangent:monday rdf:type owl:NamedIndividual ,
+                        tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus
+tangent:onStreetBus rdf:type owl:NamedIndividual ,
+                             tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram
+tangent:onStreetTram rdf:type owl:NamedIndividual ,
+                              tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#other
+tangent:other rdf:type owl:NamedIndividual ,
+                       tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#railStation
+tangent:railStation rdf:type owl:NamedIndividual ,
+                             tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#rsu
+tangent:rsu rdf:type owl:NamedIndividual ,
+                     tangent:RoadEquipmentType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#saturday
+tangent:saturday rdf:type owl:NamedIndividual ,
+                          tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#sunday
+tangent:sunday rdf:type owl:NamedIndividual ,
+                        tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#taxiRank
+tangent:taxiRank rdf:type owl:NamedIndividual ,
+                          tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#thursday
+tangent:thursday rdf:type owl:NamedIndividual ,
+                          tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter
+tangent:trafficCounter rdf:type owl:NamedIndividual ,
+                                tangent:RoadEquipmentType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#tramStation
+tangent:tramStation rdf:type owl:NamedIndividual ,
+                             tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#tuesday
+tangent:tuesday rdf:type owl:NamedIndividual ,
+                         tangent:DayOfWeek .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#unknown
+tangent:unknown rdf:type owl:NamedIndividual ,
+                         tangent:RoadEquipmentType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange
+tangent:vehicleRailInterchange rdf:type owl:NamedIndividual ,
+                                        tangent:StopType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#vms
+tangent:vms rdf:type owl:NamedIndividual ,
+                     tangent:RoadEquipmentType .
+
+
+###  https://knowledge.c-innovationhub.com/tangent/schema#wednesday
+tangent:wednesday rdf:type owl:NamedIndividual ,
+                           tangent:DayOfWeek .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

@@ -83,6 +83,1015 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasCall -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasCall">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#Call"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#DayType"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasDayType -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasDayType">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobility/transmodel/journeys#DayType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#GeometryType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Wind"/>
+        <rdfs:range rdf:resource="http://datex2.eu/vocab/3/Common/DirectionCompassEnum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasPoint">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
+        <rdfs:range rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasStopType -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasStopType">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#TransportMode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Wind"/>
+        <rdfs:range rdf:resource="http://datex2.eu/vocab/3/Common/DirectionCompassEnum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#refersToLine -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#refersToLine">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobility/transmodel/journeys#Line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#Call"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#airTemperature -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#airTemperature">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#areaName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#areaName">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/NamedArea"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#causeDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#causeDescription">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Situation/Cause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Situation/Cause"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Period"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#forecast -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#forecast">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#isAvailable -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#isAvailable">
+        <rdfs:domain rdf:resource="https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#locationIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#locationIndex">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Wind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#order -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#order">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#Call"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/OverallPeriod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/OverallPeriod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#overrunning -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#overrunning">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Validity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#publicCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#publicCode">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Situation/SituationRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Situation/SituationRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Period"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#timeValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#timeValue">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#travelTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#travelTime">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#windSpeed -->
+
+
+    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#windSpeed">
+        <rdfs:domain rdf:resource="http://datex2.eu/vocab/3/Common/Wind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Common/DirectionCompassEnum -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Common/DirectionCompassEnum"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Common/OverallPeriod -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Common/OverallPeriod"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Common/Period -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Common/Period"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Common/Temperature -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Common/Temperature"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Common/Validity -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Common/Validity"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Common/Wind -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Common/Wind"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/LocationReferencing/NamedArea -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/LocationReferencing/NamedArea"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/LocationReferencing/PointLocation -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/LocationReferencing/PointLocation"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Situation/Cause -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Situation/Cause"/>
+    
+
+
+    <!-- http://datex2.eu/vocab/3/Situation/SituationRecord -->
+
+
+    <owl:Class rdf:about="http://datex2.eu/vocab/3/Situation/SituationRecord"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#Call -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#Call"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#GeometryType -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#GeometryType"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#StopType -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#TransportMode -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#TransportMode"/>
+    
+
+
+    <!-- https://w3id.org/mobility/transmodel/journeys#DayType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mobility/transmodel/journeys#DayType"/>
+    
+
+
+    <!-- https://w3id.org/mobility/transmodel/journeys#Line -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mobility/transmodel/journeys#Line"/>
+    
+
+
+    <!-- https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint"/>
+    
+
+
+    <!-- https://w3id.org/mobility/transmodel/journeys#ServiceCalendar -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"/>
+    
+
+
+    <!-- https://w3id.org/mobility/transmodel/journeys#ServiceJourney -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mobility/transmodel/journeys#ServiceJourney"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#Polygon -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#Polygon">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#GeometryType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#airport -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#airport">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#bus -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#bus">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#TransportMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#busStation -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#busStation">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#cctv -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#cctv">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#coachStation -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#coachStation">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#ferryPort -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#ferryPort">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#ferryStop -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#ferryStop">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#friday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#friday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#harbourPort -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#harbourPort">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#liftStation -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#liftStation">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#metroStation -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#metroStation">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#monday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#monday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#other -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#other">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#railStation -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#railStation">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#rsu -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#rsu">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#saturday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#saturday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#sunday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#sunday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#taxiRank -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#taxiRank">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#thursday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#thursday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#tramStation -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#tramStation">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#tuesday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#tuesday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#unknown -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#unknown">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#StopType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#vms -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#vms">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/tangent/schema#wednesday -->
+
+
+    <owl:NamedIndividual rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#wednesday">
+        <rdf:type rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

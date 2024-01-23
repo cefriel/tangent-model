@@ -1,4 +1,52 @@
 [ {
+  "@id" : "http://datex2.eu/vocab/3/Common/DirectionCompassEnum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Common/OverallPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Common/Period",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Common/Temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Common/Validity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Common/Wind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/LocationReferencing/NamedArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Situation/Cause",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://datex2.eu/vocab/3/Situation/SituationRecord",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -19,6 +67,12 @@
 }, {
   "@id" : "http://purl.org/ontology/bibo/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/tangent/schema",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -65,4 +119,655 @@
     "@language" : "en",
     "@value" : "1.0.0"
   } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#Call",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#GeometryType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#Polygon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#GeometryType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#TransportMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#airTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#airport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#areaName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/NamedArea"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#TransportMode"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#busStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#causeDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Situation/Cause"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#cctv",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#coachStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#detailedCauseType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Situation/Cause"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#directionByCompass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#directionByDegrees",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#endOfPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#ferryPort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#ferryStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#forecast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/SinglePhysicalQuantity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#freeFlowTravelTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#friday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#harbourPort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasCall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#Call"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasDayOfWeek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#DayType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasDayType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#DayType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasGeometryType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#GeometryType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasMaximumWindDirectionCompass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Wind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/DirectionCompassEnum"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasRoadEquipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasStopType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasTransportMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#TransportMode"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#hasWindDirectionCompass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Wind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/DirectionCompassEnum"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#isAvailable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#isLastPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#lengthAffected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/SupplementaryPositionalDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#liftStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#locationIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PointLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#maximumTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#maximumWindSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Wind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#metroStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#minimumTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#monday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#noPrecipitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/PrecipitationInformation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#normallyExpectedTravelTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#onStreetBus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#onStreetTram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#order",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#Call"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#overallEndTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/OverallPeriod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#overallStartTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/OverallPeriod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#overrunning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Validity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#predefinedItineraryName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/LocationReferencing/PredefinedItinerary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#publicCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#railStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#refersToLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#Line"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#refersToScheduledStopPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#Call"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#refersToServiceCalendar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#rsu",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#saturday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Situation/SituationRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#situationRecordObservationTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Situation/SituationRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#startOfPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Period"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#sunday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#taxiRank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#thursday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#timeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/MeasurementOrCalculationTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#trafficCounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#tramStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#travelTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#travelTimeDelay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/RoadTrafficData/TravelTimeData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#tuesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#unknown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#vehicleRailInterchange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#StopType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#vms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipmentType"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#wednesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#DayOfWeek"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#windSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://datex2.eu/vocab/3/Common/Wind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mobility/transmodel/journeys#DayType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mobility/transmodel/journeys#Line",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mobility/transmodel/journeys#ScheduledStopPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceCalendar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]
