@@ -500,36 +500,6 @@
     
 
 
-    <!-- https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription -->
-
-
-    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription">
-        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId -->
-
-
-    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId">
-        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName -->
-
-
-    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName">
-        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference -->
 
 

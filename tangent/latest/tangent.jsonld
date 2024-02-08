@@ -594,33 +594,6 @@
     "@id" : "https://w3id.org/mobility/transmodel/journeys#ServiceCalendar"
   } ]
 }, {
-  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#rsu",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {

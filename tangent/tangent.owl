@@ -309,24 +309,6 @@ tangent:publicCode rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:string .
 
 
-###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription
-tangent:roadEquipmentDescription rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain tangent:RoadEquipment ;
-                                 rdfs:range xsd:string .
-
-
-###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId
-tangent:roadEquipmentId rdf:type owl:DatatypeProperty ;
-                        rdfs:domain tangent:RoadEquipment ;
-                        rdfs:range xsd:string .
-
-
-###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName
-tangent:roadEquipmentName rdf:type owl:DatatypeProperty ;
-                          rdfs:domain tangent:RoadEquipment ;
-                          rdfs:range xsd:string .
-
-
 ###  https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference
 tangent:situationRecordCreationReference rdf:type owl:DatatypeProperty ;
                                          rdfs:domain dxsituation:SituationRecord ;

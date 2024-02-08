@@ -294,24 +294,6 @@
             rdfs:range xsd:string .
 
 
-###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription
-:roadEquipmentDescription rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :RoadEquipment ;
-                          rdfs:range xsd:string .
-
-
-###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId
-:roadEquipmentId rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :RoadEquipment ;
-                 rdfs:range xsd:string .
-
-
-###  https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName
-:roadEquipmentName rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :RoadEquipment ;
-                   rdfs:range xsd:string .
-
-
 ###  https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference
 :situationRecordCreationReference rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <http://datex2.eu/vocab/3/Situation/SituationRecord> ;

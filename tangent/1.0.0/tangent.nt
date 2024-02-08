@@ -254,21 +254,6 @@
 <https://knowledge.c-innovationhub.com/tangent/schema#publicCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://knowledge.c-innovationhub.com/tangent/schema#publicCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
-# https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-# 
-# https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-# 
-# https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/tangent/schema#RoadEquipment> .
-<https://knowledge.c-innovationhub.com/tangent/schema#roadEquipmentName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-# 
 # https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference
 <https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://knowledge.c-innovationhub.com/tangent/schema#situationRecordCreationReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datex2.eu/vocab/3/Situation/SituationRecord> .
