@@ -1,6 +1,7 @@
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2002/07/owl#versionIRI> <https://knowledge.c-innovationhub.com/tangent/schema/1.0.0> .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Andrea Fiano (Cefriel)"@en .
+<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Gianluca Gizzi (Cefriel)"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Marco Comerio (Cefriel)"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Marco Grassi (Cefriel)"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/creator> "Mario Scrocca (Cefriel)"@en .
@@ -8,10 +9,10 @@
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/description> "Ontology for the TANGENT Reference Conceptual Model."@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/publisher> "Cefriel"@en .
-<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/title> "TANGENT Rereference Conceptual Model"@en .
+<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/title> "TANGENT Reference Conceptual Model"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/ontology/bibo/status> "Published Ontology"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology for the TANGENT Reference Conceptual Model." .
-<https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2000/01/rdf-schema#label> "TANGENT Rereference Conceptual Model" .
+<https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2000/01/rdf-schema#label> "TANGENT Reference Conceptual Model" .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <https://schema.org/funding> <https://doi.org/10.3030/955273> .
 # 

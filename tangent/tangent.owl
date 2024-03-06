@@ -29,14 +29,15 @@
                                                                     "Valentina Carriero (Cefriel)"@en;
                                                         dct:contributor "Marco Grassi (Cefriel)"@en ,
                                                                     "Andrea Fiano (Cefriel)"@en ,
+                                                                    "Gianluca Gizzi (Cefriel)"@en ,
                                                                     "Marco Comerio (Cefriel)"@en ;
                                                         dct:description "Ontology for the TANGENT Reference Conceptual Model."@en ;
                                                         dct:license <https://creativecommons.org/licenses/by/4.0/> ;
                                                         dct:publisher "Cefriel"@en ;
-                                                        dct:title "TANGENT Rereference Conceptual Model"@en ;
+                                                        dct:title "TANGENT Reference Conceptual Model"@en ;
                                                         <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
                                                         rdfs:comment "Ontology for the TANGENT Reference Conceptual Model." ;
-                                                        rdfs:label "TANGENT Rereference Conceptual Model" ;
+                                                        rdfs:label "TANGENT Reference Conceptual Model" ;
                                                         owl:versionInfo "1.0.0"@en .
 
 #################################################################

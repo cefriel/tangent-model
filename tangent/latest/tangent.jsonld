@@ -81,6 +81,9 @@
     "@value" : "Andrea Fiano (Cefriel)"
   }, {
     "@language" : "en",
+    "@value" : "Gianluca Gizzi (Cefriel)"
+  }, {
+    "@language" : "en",
     "@value" : "Marco Comerio (Cefriel)"
   }, {
     "@language" : "en",
@@ -106,7 +109,7 @@
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
-    "@value" : "TANGENT Rereference Conceptual Model"
+    "@value" : "TANGENT Reference Conceptual Model"
   } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@language" : "en",
@@ -116,7 +119,7 @@
     "@value" : "Ontology for the TANGENT Reference Conceptual Model."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TANGENT Rereference Conceptual Model"
+    "@value" : "TANGENT Reference Conceptual Model"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://knowledge.c-innovationhub.com/tangent/schema/1.0.0"
