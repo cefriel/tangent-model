@@ -10,16 +10,16 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://knowledge.c-innovationhub.com/tangent/schema">
         <owl:versionIRI rdf:resource="https://knowledge.c-innovationhub.com/tangent/schema/1.0.0"/>
-        <terms:contributor xml:lang="en">The definition of the TANGENT ontology is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme.</terms:contributor>
+        <terms:contributor xml:lang="en">The definition of the TANGENT Rereference Conceptual Model is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme.</terms:contributor>
         <terms:creator xml:lang="en">Mario Scrocca (Cefriel)</terms:creator>
         <terms:creator xml:lang="en">Valentina Carriero (Cefriel)</terms:creator>
-        <terms:description xml:lang="en">TANGENT ontology for the TANGENT Reference Conceptual Model.</terms:description>
+        <terms:description xml:lang="en">Ontology for the TANGENT Reference Conceptual Model.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:publisher xml:lang="en">Cefriel</terms:publisher>
-        <terms:title xml:lang="en">TANGENT ontology</terms:title>
+        <terms:title xml:lang="en">TANGENT Rereference Conceptual Model</terms:title>
         <bibo:status xml:lang="en">Published Ontology</bibo:status>
-        <rdfs:comment>TANGENT ontology for the TANGENT Reference Conceptual Model.</rdfs:comment>
-        <rdfs:label>TANGENT ontology</rdfs:label>
+        <rdfs:comment>Ontology for the TANGENT Reference Conceptual Model.</rdfs:comment>
+        <rdfs:label>TANGENT Rereference Conceptual Model</rdfs:label>
         <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
     </owl:Ontology>
     

@@ -3,7 +3,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <https://knowledge.c-innovationhub.com/tangent/schema/1.0.0> a prov:Entity;
-	 dc:title "TANGENT ontology";
+	 dc:title "TANGENT Rereference Conceptual Model";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo :agent2;
@@ -11,4 +11,4 @@
 .
 :agent0 a prov:Agent; foaf:name "Mario Scrocca (Cefriel)".
 :agent1 a prov:Agent; foaf:name "Valentina Carriero (Cefriel)".
-:agent2 a prov:Agent; foaf:name "The definition of the TANGENT ontology is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme.".
+:agent2 a prov:Agent; foaf:name "The definition of the TANGENT Rereference Conceptual Model is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme.".

@@ -78,7 +78,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@language" : "en",
-    "@value" : "The definition of the TANGENT ontology is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme."
+    "@value" : "The definition of the TANGENT Rereference Conceptual Model is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme."
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@language" : "en",
@@ -89,7 +89,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "TANGENT ontology for the TANGENT Reference Conceptual Model."
+    "@value" : "Ontology for the TANGENT Reference Conceptual Model."
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
@@ -100,17 +100,17 @@
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
-    "@value" : "TANGENT ontology"
+    "@value" : "TANGENT Rereference Conceptual Model"
   } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@language" : "en",
     "@value" : "Published Ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "TANGENT ontology for the TANGENT Reference Conceptual Model."
+    "@value" : "Ontology for the TANGENT Reference Conceptual Model."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "TANGENT ontology"
+    "@value" : "TANGENT Rereference Conceptual Model"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://knowledge.c-innovationhub.com/tangent/schema/1.0.0"
