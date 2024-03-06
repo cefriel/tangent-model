@@ -1,6 +1,8 @@
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2002/07/owl#versionIRI> <https://knowledge.c-innovationhub.com/tangent/schema/1.0.0> .
-<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "The definition of the TANGENT Rereference Conceptual Model is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme."@en .
+<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Andrea Fiano (Cefriel)"@en .
+<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Marco Comerio (Cefriel)"@en .
+<https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/contributor> "Marco Grassi (Cefriel)"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/creator> "Mario Scrocca (Cefriel)"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/creator> "Valentina Carriero (Cefriel)"@en .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://purl.org/dc/terms/description> "Ontology for the TANGENT Reference Conceptual Model."@en .
@@ -11,6 +13,7 @@
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology for the TANGENT Reference Conceptual Model." .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2000/01/rdf-schema#label> "TANGENT Rereference Conceptual Model" .
 <https://knowledge.c-innovationhub.com/tangent/schema> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<https://knowledge.c-innovationhub.com/tangent/schema> <https://schema.org/funding> <https://doi.org/10.3030/955273> .
 # 
 # 
 # #################################################################
@@ -40,6 +43,9 @@
 # 
 # http://purl.org/ontology/bibo/status
 <http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 

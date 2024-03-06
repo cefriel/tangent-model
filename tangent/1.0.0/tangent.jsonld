@@ -78,7 +78,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@language" : "en",
-    "@value" : "The definition of the TANGENT Rereference Conceptual Model is a result of the TANGENT project (Grant Agreement 881825), co-funded by the European Commission under the Horizon 2020 Framework Programme."
+    "@value" : "Andrea Fiano (Cefriel)"
+  }, {
+    "@language" : "en",
+    "@value" : "Marco Comerio (Cefriel)"
+  }, {
+    "@language" : "en",
+    "@value" : "Marco Grassi (Cefriel)"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@language" : "en",
@@ -118,6 +124,9 @@
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
     "@value" : "1.0.0"
+  } ],
+  "https://schema.org/funding" : [ {
+    "@id" : "https://doi.org/10.3030/955273"
   } ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/tangent/schema#Call",
@@ -728,6 +737,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
+}, {
+  "@id" : "https://schema.org/funding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/mobility/transmodel/journeys#DayType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
