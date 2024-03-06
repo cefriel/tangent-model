@@ -1,5 +1,445 @@
 <h2 id="desc" class="list">TANGENT ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
 <span class="markdown">
-TANGENT ontology for the TANGENT Reference Conceptual Model.
+
+The definition of the TANGENT Reference Conceptual Model is based on
+the analysis of data standards requested by the European
+Commission (EC) Delegated Regulations (DR) supplementing the ITS
+Directive 2010/40/EU:
+
+-   DR EU No. 886/2013 -- Safety Related Traffic Information (SRTI);
+
+-   DR EU No 2015/962 -- Real-time Traffic Information (RTTI);
+
+-   DR EU 2017/1926 -- Multimodal Traffic Information Service (MMTIS).
+
+The data standards mentioned in these directives are:
+
+-   **[DATEX II](https://www.datex2.eu/)**: the EU standard for the exchange of
+    traffic-related data;
+
+-   **[NeTEx](https://netex-cen.eu/)**: the CEN Technical Standard for exchanging Public
+    Transport schedules and related data;
+
+-   **[SIRI](https://www.siri-cen.eu/)**: the CEN technical standard for the exchange of
+    real-time information about the planned, current, or projected
+    performance of public transport operations.
+
+Each data standard supports the exchange of a specific set of
+mobility-related information. In the following, a list of information
+exchanges supported by each standard is reported:
+
+-   DATEX II: traffic situations, traffic status, traffic management,
+    Messages displayed on Variable Message Signs (VMS), service
+    information, parking, truck parking, urban traffic specifics,
+    electromobility infrastructure, refuelling and recharging,
+    management of electronic traffic regulations, and urban vehicle
+    access regulations.
+
+-   NeTEx: public transport network topologies, public transport
+    scheduled timetables, and public transport fares.
+
+-   SIRI: real-time information about schedules, vehicles, and
+    connections, together with general informational messages related to
+    the operation of the services.
+
 </span>
 
+<h3 id="ontologies" class="list">Reused ontologies</h3>
+<span class="markdown">
+To support the definition of the TANGENT Reference Conceptual Model, the
+existing ontologies encoding the semantics of the mentioned standards
+have been analysed.
+
+Considering the DATEX II format, we selected for reuse the ontology directly developed by the DATEX II
+organization and presented in 2021 at the DATEX II 6th Forum. It represents a JSON-LD serialisation of the DATEX II conceptual
+model version 3 and is divided into five modules:
+-   *Payload* module (https://datex2.eu/vocab/3/D2Payload/)
+-   *Common* module (https://datex2.eu/vocab/3/Common/)
+-   *Location Referencing* module (https://datex2.eu/vocab/3/LocationReferencing/)
+-   *Situation* module (https://datex2.eu/vocab/3/Situation/)
+-   *Road Traffic Data* module (https://datex2.eu/vocab/3/RoadTrafficData/)
+-   *Variable Message* Sign module (https://datex2.eu/vocab/3/Vms/)
+
+The advantage of this model is its full coverage with respect to the DATEX II
+specification, the one-to-one mapping to classes and properties, and the
+fact that it is directly defined and published by the DATEX II
+organization. However, the model is defined as an almost automatic
+conversion of the DATEX II specification, thus introducing some objectionable design
+decision from an ontological point of view. For this reason, additional usage guidelines regulate the adoption of the
+ontology in the TANGENT Reference Conceptual Model:
+- basic datatypes values that can be represented through RDF
+    Literals will be represented as such, not instantiating the
+    datatypes classes (e.g., Boolean) defined by DATEX II;
+- geographical information may be represented by exploiting relevant
+    ontologies such as the [Basic Geo](https://www.w3.org/2003/01/geo/) (WGS84 lat/long) Vocabulary,
+    [GeoSPARQL](http://www.opengis.net/ont/geosparql#), or the dedicated vocabularies defined by the [LOD
+    SRTI DATEX II](https://cef.uv.es/lodroadtran18/def/transporte/dtx_srti) ontology (e.g., Alert-C) to improve
+    interoperability with other modules of the TANGENT Reference
+    Conceptual Model.
+
+The NeTEx and SIRI standards are based on the [Transmodel](https://www.transmodel-cen.eu/standards/) conceptual
+model. The Mobility Ontology Catalogue (https://w3id.org/mobility) defines a suite of
+ontologies based on existing standards, including a Transmodel ontology. 
+
+The Transmodel ontology (https://w3id.org/mobility/transmodel) defines five submodules:
+-   *Core* module (https://w3id.org/mobility/transmodel/core)
+-   *Commons* module (https://w3id.org/mobility/transmodel/commons>)
+-   *Fares* module (https://w3id.org/mobility/transmodel/facilities)
+-   *Facilities* module (https://w3id.org/mobility/transmodel/fares)
+-   *Journeys* module (https://w3id.org/mobility/transmodel/journeys)
+
+As for modules based on NeTEx, many classes and properties that revolve
+around stop points and public transport schedules and lines could be
+found in the Transmodel ontology. The [DCI Metadata Terms](http://purl.org/dc/terms/) and [Schema.org](https://schema.org/) vocabularies are reused
+by the Transmodel ontology and similarly also in other TANGENT Reference Conceptual Model modules.
+
+An ontological version of the SIRI standard did not
+exist, thus we developed a dedicated ontology representing concepts and
+relations mapped from SIRI and considered as relevant to TANGENT's
+requirements. For the design of the ontology, we adopted an approach
+aligned to the one leveraged for the definition of the DATEX II JSON-LD
+ontology from the DATEX II specification. Therefore, we did not follow a
+classic ontology engineering process starting from scratch, but we
+adapted the existing SIRI specification to an ontological format.
+Moreover, we manually curated the SIRI ontology to improve the alignment
+with the other ontologies adopted in the TANGENT Reference Conceptual
+Model. We implemented the ontology and we published it online fulfilling the best practices for
+ontology implementation and publication. The ontology is available at
+[https://knowledge.c-innovationhub.com/siri\#](https://knowledge.c-innovationhub.com/siri)
+(preferred prefix *siri:*).
+
+The TANGENT Reference Conceptual Model is complemented by the definition
+of custom classes and properties covering gaps in the existing
+ontologies and specific requirements of the considered use case.
+Specifically, the definition of a few datatype properties, with XSD data
+types as range, was needed for replacing the DATEX II object properties
+linking to its custom datatype classes (e.g. *Boolean, Float, Date,*
+etc.). For instance, the DATEX II object property
+*predefinedItineraryName* has the class *MultilingualString* as range,
+while we create a custom datatype property *predefinedItineraryName*
+with the data type *string* as range. As another example, the original
+object property *overrunning* links a *Validity* to the class *Boolean*,
+and we replace it with the datatype property *overrunning* with the data
+type *boolean* as range. In other cases, we created new classes,
+properties and named individuals when we could not find them in the
+reused ontologies, as in the case of the module of the TANGENT Reference
+Conceptual Model dedicated to *Road Equipment*, or the property to
+indicate whether a point included in an itinerary is the last one
+*(isLastPoint*)*.* Finally, new object properties like *hasPoint* have
+been introduced to link classes reused from different ontologies (in
+this case, the class *PointLocation* from DATEX II and the class *Point*
+from Basic Geo).
+</span>  
+
+<h3 id="defnition" class="list">Definition of the TANGENT Reference Conceptual Model</h3>
+<span class="markdown">  
+
+Based on the analysis performed, the TANGENT Reference Conceptual Model
+was defined as a suite of ontologies considering the semantics of
+relevant EU-mandated standards and the already available related
+ontologies. The definition of the TANGENT Reference Conceptual Model has
+been guided by the requirements elicited for the harmonisation and
+fusion of data sources from the TANGENT case studies. Indeed, TANGENT
+does not aim to define a fully comprehensive suite of ontologies to
+describe the entire transportation domain but to identify and extend the
+ones needed to cover the TANGENT data requirements. Table 2 provides a
+complete overview of the ten different modules defined for the TANGENT
+Reference Conceptual Model. The table summarises for each module the
+base standard considered for identifying the semantics of concepts and
+relationships, the TANGENT Data Requirements covered
+by the module, and the already available ontologies reused in each
+module.
+
+</span>
+<table>
+    <thead style="text-align: center;">
+    <tr class="header">
+    <th><em>Module</em></th>
+    <th><em>Base Standard</em></th>
+    <th><em>Data Requirements</em></th>
+    <th><em>Reused ontologies</em></th>
+    </tr>
+    </thead>
+    <tbody style="text-align: center;">
+    <tr class="odd">
+    <td>Road Transport Network</td>
+    <td>Datex II</td>
+    <td>Road Transport Network (roads, limited access zones, etc)</td>
+    <td>GeoSPARQL, Basic Geo, Datex II JSON-LD (location, common)</td>
+    </tr>
+    <tr class="even">
+    <td>Road Equipment</td>
+    <td>Datex II</td>
+    <td>Road Equipment Position</td>
+    <td>Datex II JSON-LD (location), DC Terms, Schema.org</td>
+    </tr>
+    <tr class="odd">
+    <td>Road Traffic Data</td>
+    <td>Datex II</td>
+    <td>Road Traffic Measurements (traffic occupancy, speed, flow)<br />
+    Floating Vehicle Data (GPS, mobile, etc)</td>
+    <td>Datex II JSON-LD (traffic)</td>
+    </tr>
+    <tr class="even">
+    <td>Road Travel Times</td>
+    <td>Datex II</td>
+    <td>Road Travel Times (external services, statistics, etc.)</td>
+    <td>Datex II JSON-LD (location, traffic)</td>
+    </tr>
+    <tr class="odd">
+    <td>Events</td>
+    <td>Datex II</td>
+    <td><p>Road Transport Network Events (planned)<br />
+    Road Transport Network Incidents (unplanned)<br />
+    Influencing Planned Events (sports, entertainment, etc)<br />
+    Weather Events</td>
+    <td>Datex II JSON-LD (situation, location, common)</td>
+    </tr>
+    <tr class="even">
+    <td>Weather Data</td>
+    <td>Datex II</td>
+    <td>Forecasted Weather Data<br />
+    Weather Data (measurements, e.g., temperature, humidity, etc.)</td>
+    <td>Datex II JSON-LD (location, traffic, common)</td>
+    </tr>
+    <tr class="odd">
+    <td>Stop Points</td>
+    <td>NeTEx</td>
+    <td>Public Transport Network</td>
+    <td>Transmodel ontology (commons, journeys), Basic Geo</td>
+    </tr>
+    <tr class="even">
+    <td>Schedules</td>
+    <td>NeTEx</td>
+    <td>Public Transport Schedules and Lines</td>
+    <td>Transmodel ontology (commons, journeys, organisations)</td>
+    </tr>
+    <tr class="odd">
+    <td>Situation Exchange</td>
+    <td>SIRI</td>
+    <td>Public Transport Network Events (planned)<br />
+    Public Transport Network Incidents (unplanned)</td>
+    <td>Basic Geo</td>
+    </tr>
+    <tr class="even">
+    <td>Vehicle Monitoring</td>
+    <td>SIRI</td>
+    <td>Floating PT Vehicle Data<br />
+    Public Transport Delays</td>
+    <td>Basic Geo</td>
+    </tr>
+    </tbody>
+    </table>
+
+<span class="markdown">
+
+Each module is described using diagrams adopting the [*Graffoo*](https://essepuntato.it/graffoo/) notation for OWL
+ontologies. We list here all the prefixes, and associated
+namespaces, mentioned in the next figures.
+
+-   *tangent:* https://knowledge.c-innovationhub.com/tangent/schema\#\
+-   *siri:* https://knowledge.c-innovationhub.com/siri\#
+-   *dxtraffic:* http://datex2.eu/vocab/3/RoadTrafficData/
+-   *dxlocation:* http://datex2.eu/vocab/3/LocationReferencing/
+-   *dxcommon:* http://datex2.eu/vocab/3/Common/
+-   *dxsituation:* http://datex2.eu/vocab/3/Situation/
+-   *tmjou:* https://w3id.org/mobility/transmodel/journeys\#
+-   *tmorg:* https://w3id.org/mobility/transmodel/organisations\#
+-   *tmcom:* https://w3id.org/mobility/transmodel/commons\#
+-   *dcterms:* http://purl.org/dc/terms/
+-   *geo:* http://www.w3.org/2003/01/geo/wgs84\_pos\#
+-   *geosparql:* http://www.opengis.net/ont/geosparql\
+-   *schema:* http://schema.org/
+
+For data about traffic and weather, the DATEX II standard, thus the
+DATEX ontology, has been used and extended. The main two concepts common
+to all the reused portions of the model are:
+
+-   *ElaboratedDataPublication*: a publication containing one or more
+    elaborated data, linked to a *PhysicalQuantity* that has been
+    measured or calculated.
+
+-   *BasicData*: the data that are either measured or calculated at the
+    same time (period), which are further specialized as *TrafficData,
+    WeatherData, TravelTimeData,* and so on.
+
+Two additional concepts used multiple times across the TANGENT Reference
+Conceptual Model are: *ItineraryByReference* and
+*MeasurementOrCalculationTime*.
+
+An *ItineraryByReference* is a set of multiple ordered locations defined
+by reference to a *PredefinedItinerary*, which is in turn linked to the
+individual locations contained in the actual itinerary
+(*haslocationContainedInItinerary).* For representing the latitude and
+longitude associated with each *PointLocation* within the itinerary we
+reuse the [Basic Geo](https://www.w3.org/2003/01/geo/) ontology.
+
+</span>
+<p align="center"><img src="./sections/media/image2.png" alt="Model for an itinerary" height="200"></p>
+<span class="markdown">
+
+The class *MeasurementOrCalculationTime* describes the time
+(*timeValue)* at which a measurement or calculation of a (set of)
+value(s) was performed, indicating whether it is the beginning,
+intermediate or ending time. The time is expressed in the form of a time
+*Period*, with a start and an end date.
+
+</span>
+<p align="center"><img src="./sections/media/image2.png" alt="Model for a measurement or calculation time" height="200"></p>
+<span class="markdown">
+
+The **Road Transport Network** module leverages the class *NamedArea* to represent an area defined by a name
+(*areaName*) and linked to a *country*, which is expressed using the EN
+ISO 3166-1 two-character country code. Such named area can be of
+different types (*namedAreaType),* like *trafficArea* or *lake*. The
+[GeoSPARQL](http://www.opengis.net/ont/geosparql\#) ontology is reused for linking the named area to its
+*Geometry*, which is in turn linked to multiple *Points* when the
+geometry is of type *Polygon*.
+
+</span>
+<p align="center"><img src="./sections/media/image3.png" alt="Model for the Road Transport Network module" height="300"></p>
+<span class="markdown">
+
+The **Road Travel Times** module models data about the derived or computed travel
+time (datatype property *travelTime*) by referring to a linear section of
+the road network. Other three datatype properties express the travel
+time that is normally expected for the given period
+(*normallyExpectedTravelTime*), the travel time which would be expected
+under ideal free-flow conditions (*freeFlowTravelTime*), and the delay
+compared to free-flow conditions (*travelTimeDelay*). Moreover, the
+*TravelTimeData* is linked to the current trend in the travel time
+between two locations (*decreasing, increasing* or *stable*) and is
+typed (*travelTimeType*) based on how it was derived (e.g., *estimated,
+best, sum,* and so on).
+
+</span>
+<p align="center"><img src="./sections/media/image4.png" alt="Model for the Road Travel Times module" height="300"></p>
+<span class="markdown">
+
+Three specific types of *TrafficData* are identified in the **Road Traffic Data** module:
+*TrafficFlow* rates (measured or normally expected), average or expected
+*TrafficSpeed*, and the density of vehicles (*TrafficConcentration*).
+The class *TrafficStatus* models the status of traffic conditions on a
+specific section or at a specific point on the road network, which can
+be heavy, slow, stationary, etc.
+
+</span>
+<p align="center"><img src="./sections/media/image5.png" alt="Model for the Road Traffic Data module" height="300"></p>
+<span class="markdown">
+
+For describing road equipment, since the Datex II ontology provides little support for
+this type of entities, the **Road Equipment** module define specific classes and properties or
+reuse other ontologies. The diagram shows the properties defined or
+selected for representing its id, name, description and type (e.g.
+*trafficCounter*, *cctv*, and so on). Each individual of the
+*RoadEquipment* class is linked to its *PointLocation*, with longitude
+and latitude.
+
+</span>
+<p align="center"><img src="./sections/media/image6.png" alt="Model for the Road Equipment module" height="300"></p>
+<span class="markdown">
+
+The **Events** module defines how to represent different types of events. To record such information the model adopts entities from the Datex II ontologies such as *AbnormalTraffic*, *Accidents* involving one or more
+vehicles, *Activities* by humans like organised *PublicEvent*s which
+could disrupt traffic. Specifically, a *SituationRecord* is linked to an
+itinerary (*haslocationReference*) and to the time when the information
+in the record was observed (*situationRecordObservationTime*). Moreover,
+it is possible to specify a *Validity* and its status and the *Cause* of
+the situation, such as the presence of animals on the road or holiday
+traffic.
+
+</span>
+<p align="center"><img src="./sections/media/image7.png" alt="Model for the Events module" height="450"></p>
+<span class="markdown">
+
+The **Weather Data** module identifies the most relevant classes and properties for
+representing data related to the weather at a specific location or
+multiple locations. Specifically, we model the measured atmospheric
+humidity (*HumidityInformation*) and air temperature, along with the
+maximum and minimum temperature during the measurement period
+(*TemperatureInformation*). *WindInformation* includes measurements of
+wind speed and the direction from which the wind blows.
+*PrecipitationInformation* allows indicating whether precipitation was
+present or not (*noPrecipitation*), and, if it was, to add some details
+such as intensity and type (e.g. *snow, freezingRain,* etc.). Finally,
+information about atmospheric *Pressure* has been modeled.
+
+</span>
+<p align="center"><img src="./sections/media/image8.png" alt="Model for the Weather Data module" height="500"></p>
+<span class="markdown">
+
+The SIRI standard semantics are selected to model
+monitored vehicle journeys and situations affecting transport networks,
+respectively.
+
+In the **Vehicle Monitoring** module, a *VehicleActivity*, associated with the time at
+which data about it was recorded, is linked to the journey of the
+vehicle that is being monitored. Such *MonitoredVehicleJourney* is
+related to elements identifying the journey, that is the reference to
+the line (*lineRef*) and the direction (*directionRef*) of the journey,
+and the *FramedVehicleJourneyRef*, that is a reference to the vehicle
+journey that the vehicle is making. Other references specify the origin
+and destination scheduled stop points, along with their names. The
+property *publishedLineName* indicates the name or number by which the
+line is known to the public. The *operatorRef* refers to the operator
+for the current point in the journey. The class *Point* from the Basic
+Geo ontology has been reused for the current geospatial location of the
+vehicle. The *Occupancy*, with predefined possible values as named
+individuals, allows giving an idea of how occupied the journey is after
+departing from a given stop, e.g. *manySeatsAvailable* or
+*standingRoomOnly*. Two additional datatype properties model the
+*bearing* in which the vehicle is heading and the *delay* against the
+schedule. Finally, the journey can be linked to the operational block
+associated with the vehicle journey (*hasOperationalBlock).*
+</span>
+<p align="center"><img src="./sections/media/image9.png" alt="Model for the Vehicle Monitoring module" height="450"></p>
+<span class="markdown">
+
+In the **Situation Exchange** module, the model for public transport situations revolves around
+the class *PtSituationElement*, which can be linked to many different
+types of affected elements, that is, a line, an operator, a vehicle
+journey, a stop point (which is linked to its point location), and, more
+generally, an affected place. The situation has a *creationTime*, and it
+can be planned (e.g. engineering works) or unplanned (e.g. service
+alteration). Sets of specific named individuals allow the definition of
+the *VerificationStatus,* i.e., whether the situation has been verified,
+the source of information (*SourceType),* like email, phone, or fax, and
+the cause of alert (e.g. *cableFire, policeOrder,* etc.).
+</span>
+<p align="center"><img src="./sections/media/image10.png" alt="Model for the Situation Exchange module" height="500"></p>
+<span class="markdown">
+
+The two following diagrams show how we reused and extended the Transmodel ontology in the TANGENT Reference Conceptual Model.
+
+Specifically, in the **Stop Points** module, a *ScheduledStopPoint* is associated
+with its name (*label)*, *identifier* and *publicCode*. By introducing
+the property *hasStopType* we can specify the specific type of a
+scheduled stop point, e.g., *onStreetBus, airport, railStation*, and so
+on. The stop point is also linked to a *Location*, with its latitude and
+longitude coordinates.
+</span>
+<p align="center"><img src="./sections/media/image11.png" alt="Model for the Stop Points module" height="300"></p>
+<span class="markdown">
+
+The **Schedules** module defines the model for public transport lines, schedules and
+services. A *Line*, intended as a group of routes, is described by its
+*name, identifier, description*, *publicCode* and *TransportMode.* A
+line is *runBy* an *Operator*, which is linked to its contact details
+(*telephone* number, *url*, and *email* address). The property
+*presentedBy* links a line with its corresponding *Presentation* in a
+map, with each associated *colour* that may be different from the colour
+used to represent the text related to the line (*textColour)*. A
+*ServiceJourney*, which is a journey made by a vehicle that carries
+passengers for one specified day type, is linked to the specific *Line*
+with the *refersToLine* property. Each service journey can have one or
+more *Calls,* with an arrival and departure time, their order number
+within the sequence of stops, and the scheduled stop point they refer
+to. Finally, the service journey is linked to the *ServiceCalendar*,
+with its beginning (*from*) and end (*to*), and is associated with a
+*DayType,* which is a type of day characterised by one or more
+properties which affect public transport operation and specifies the
+*DaysofWeek*s it refers to (e.g. *Monday, Tuesday,* etc.).
+</span>
+
+<p align="center"><img src="./sections/media/image12.png" alt="Model for the Schedules module" height="500"></p>
