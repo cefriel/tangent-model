@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for road-equipment-position",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "unknown",
+              "cctv",
+              "vms",
+              "rsu",
+              "trafficCounter"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "point": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "directionByDegrees": {
+            "type": "number"
+          },
+          "directionByCompass": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "westNorthWest",
+                  "south",
+                  "northNorthEast",
+                  "east",
+                  "eastNorthEast",
+                  "eastSouthEast",
+                  "northEast",
+                  "northNorthWest",
+                  "northWest",
+                  "southEast",
+                  "southSouthEast",
+                  "southSouthWest",
+                  "southWest",
+                  "west",
+                  "westSouthWest",
+                  "north"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

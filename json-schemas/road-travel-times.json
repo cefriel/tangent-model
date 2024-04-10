@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for road-travel-times",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "predefinedItineraryReference": {
+        "type": "string"
+      },
+      "measurementOrCalculationTime": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "startOfPeriod": {
+            "type": "string"
+          },
+          "endOfPeriod": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "beginTime",
+                  "endTime",
+                  "middleTime"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "travelTimeTrendType": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "stable",
+              "decreasing",
+              "increasing"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "travelTimeType": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "sum",
+              "predictor",
+              "reconstituted",
+              "best",
+              "instantaneous",
+              "profile",
+              "estimated"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "travelTime": {
+        "type": "number"
+      },
+      "freeFlowTravelTime": {
+        "type": "number"
+      },
+      "travelTimeDelay": {
+        "type": "number"
+      },
+      "normallyExpectedTravelTime": {
+        "type": "number"
+      },
+      "itinerary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "lengthAffected": {
+            "type": "number"
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "isLastPoint": {
+                  "type": "boolean"
+                },
+                "directionByDegrees": {
+                  "type": "number"
+                },
+                "directionByCompass": {
+                  "type": "string",
+                  "anyOf": [
+                    {
+                      "enum": [
+                        "westNorthWest",
+                        "south",
+                        "northNorthEast",
+                        "east",
+                        "eastNorthEast",
+                        "eastSouthEast",
+                        "northEast",
+                        "northNorthWest",
+                        "northWest",
+                        "southEast",
+                        "southSouthEast",
+                        "southSouthWest",
+                        "southWest",
+                        "west",
+                        "westSouthWest",
+                        "north"
+                      ]
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

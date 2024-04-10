@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for road-transport-network",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "properties": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "areaName": {
+          "type": "string"
+        },
+        "namedAreaType": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
