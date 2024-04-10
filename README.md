@@ -1,6 +1,6 @@
 # TANGENT ontology for the TANGENT Reference Conceptual Model
 
-Repository for TANGENT ontology for the TANGENT Reference Conceptual Model.
+Repository for TANGENT ontology for the TANGENT Reference Conceptual Model. [Json-schemas](./json-schemas/) are provided to validate json data that follows the TANGENT Reference Conceptual Model.
 
 | Prefix    | IRI |
 | -- | ------- |

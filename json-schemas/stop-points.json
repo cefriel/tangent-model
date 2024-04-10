@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "stopType": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "onstreetBus",
+              "onstreetTram",
+              "airport",
+              "railStation",
+              "metroStation",
+              "busStation",
+              "coachStation",
+              "tramStation",
+              "harbourPort",
+              "ferryPort",
+              "ferryStop",
+              "liftStation",
+              "vehicleRailInterchange",
+              "taxiRank",
+              "other"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "publicCode": {
+        "type": "string"
+      },
+      "location": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for events",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "creationReference": {
+        "type": "string"
+      },
+      "observationTime": {
+        "type": "string"
+      },
+      "validity": {
+        "type": "object",
+        "properties": {
+          "validityStatus": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "active",
+                  "planned",
+                  "suspended",
+                  "definedByValidityTimeSpec"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "overrunning": {
+            "type": "boolean"
+          },
+          "overallStartTime": {
+            "type": "string"
+          },
+          "overallEndTime": {
+            "type": "string"
+          },
+          "validPeriods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "startOfPeriod": {
+                  "type": "string"
+                },
+                "endOfPeriod": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "exceptionPeriods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "startOfPeriod": {
+                  "type": "string"
+                },
+                "endOfPeriod": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "causeType": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "abnormalTraffic",
+              "accident",
+              "animalPresence",
+              "authorityOperation",
+              "constructionWork",
+              "disturbance",
+              "drivingConditions",
+              "environmentalObstruction",
+              "equipmentOrSystemFault",
+              "infrastructureDamageObstruction",
+              "instructionToRoadUsers",
+              "networkManagement",
+              "nonWeatherRelatedRoadConditions",
+              "obstruction",
+              "poorEnvironment",
+              "publicEvent",
+              "rerouting",
+              "roadMaintenance",
+              "roadOperatorServiceDisruption",
+              "roadOrCarriagewayOrLaneManagement",
+              "roadsideAssistance",
+              "roadsideServiceDisruption",
+              "speedManagement",
+              "transitServiceDisruption",
+              "vehicleObstruction",
+              "weatherRelatedRoadConditions",
+              "winterEquipmentManagement",
+              "earlierEvent",
+              "earlierIncident",
+              "holidayTraffic",
+              "problemsAtBorderPost",
+              "problemsAtCustomPost",
+              "problemsOnLocalRoads",
+              "roadsideEvent",
+              "rubberNecking",
+              "technicalProblems",
+              "vandalism",
+              "other"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "causeDescription": {
+        "type": "string"
+      },
+      "detailedCauseType": {
+        "type": "string"
+      },
+      "abnormalTraffic": {
+        "type": "object",
+        "properties": {
+          "abnormalTrafficType": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "stationaryTraffic",
+                  "queuingTraffic",
+                  "slowTraffic",
+                  "heavyTraffic",
+                  "unspecifiedAbnormalTraffic",
+                  "other"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "queueLength": {
+            "type": "number"
+          },
+          "trafficFlowCharacteristics": {
+            "type": "string",
+            "enum": [
+              "trafficBlocked",
+              "smoothFlow",
+              "erraticFlow",
+              "stopAndGo"
+            ]
+          }
+        }
+      },
+      "accident": {
+        "type": "object",
+        "properties": {
+          "accidentType": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "accident",
+                  "accidentInvolvingHazardousMaterials",
+                  "accidentInvolvingHeavyLorries",
+                  "accidentInvolvingMassTransitVehicle",
+                  "accidentInvolvingPublicTransport",
+                  "accidentInvolvingRadioactiveMaterial",
+                  "accidentInvolvingTrain",
+                  "collision",
+                  "multipleVehicleAccident",
+                  "secondaryAccident",
+                  "seriousInjuryOrFatalAccident",
+                  "vehicleStuckUnderBridge",
+                  "other "
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "accidentCause": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "abnormalTraffic",
+                  "accident",
+                  "animalPresence",
+                  "authorityOperation",
+                  "constructionWork",
+                  "disturbance",
+                  "drivingConditions",
+                  "environmentalObstruction",
+                  "equipmentOrSystemFault",
+                  "infrastructureDamageObstruction",
+                  "instructionToRoadUsers",
+                  "networkManagement",
+                  "nonWeatherRelatedRoadConditions",
+                  "obstruction",
+                  "poorEnvironment",
+                  "publicEvent",
+                  "rerouting",
+                  "roadMaintenance",
+                  "roadOperatorServiceDisruption",
+                  "roadOrCarriagewayOrLaneManagement",
+                  "roadsideAssistance",
+                  "roadsideServiceDisruption",
+                  "speedManagement",
+                  "transitServiceDisruption",
+                  "vehicleObstruction",
+                  "weatherRelatedRoadConditions",
+                  "winterEquipmentManagement",
+                  "earlierEvent",
+                  "earlierIncident",
+                  "holidayTraffic",
+                  "problemsAtBorderPost",
+                  "problemsAtCustomPost",
+                  "problemsOnLocalRoads",
+                  "roadsideEvent",
+                  "rubberNecking",
+                  "technicalProblems",
+                  "vandalism",
+                  "other"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "publicEvent": {
+        "type": "object",
+        "properties": {
+          "publicEventType": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "agriculturalShow",
+                  "airShow",
+                  "artEvent",
+                  "athleticsMeeting",
+                  "commercialEvent",
+                  "culturalEvent",
+                  "ballGame",
+                  "baseballGame",
+                  "basketballGame",
+                  "beerFestival",
+                  "bicycleRace ",
+                  "boatRace",
+                  "boatShow",
+                  "boxingTournament ",
+                  "bullFight ",
+                  "ceremonialEvent",
+                  "concert",
+                  "cricketMatch",
+                  "exhibition ",
+                  "fair ",
+                  "festival ",
+                  "filmFestival",
+                  "filmTVMaking",
+                  "fireworkDisplay",
+                  "flowerEvent",
+                  "foodFestival",
+                  "footballMatch",
+                  "funfair",
+                  "gardeningOrFlowerShow ",
+                  "golfTournament",
+                  "hockeyGame",
+                  "horseRaceMeeting",
+                  "internationalSportsMeeting",
+                  "majorEvent",
+                  "marathon",
+                  "market",
+                  "match",
+                  "motorShow",
+                  "motorSportRaceMeeting ",
+                  "openAirConcert",
+                  "parade ",
+                  "procession",
+                  "raceMeeting ",
+                  "rugbyMatch",
+                  "severalMajorEvents ",
+                  "show",
+                  "showJumping ",
+                  "soundAndLightShow",
+                  "sportsMeeting",
+                  "stateOccasion",
+                  "streetFestival ",
+                  "tennisTournament",
+                  "theatricalEvent ",
+                  "tournament",
+                  "tradeFair",
+                  "waterSportsMeeting ",
+                  "wineFestival",
+                  "winterSportsMeeting ",
+                  "unknown",
+                  "other"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "venueName": {
+            "type": "string"
+          }
+        }
+      },
+      "itinerary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "lengthAffected": {
+            "type": "number"
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "isLastPoint": {
+                  "type": "boolean"
+                },
+                "directionByDegrees": {
+                  "type": "number"
+                },
+                "directionByCompass": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

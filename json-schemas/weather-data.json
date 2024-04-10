@@ -1,0 +1,233 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for weather-data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "forecast": {
+        "type": "boolean"
+      },
+      "measurementOrCalculationTime": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "startOfPeriod": {
+            "type": "string"
+          },
+          "endOfPeriod": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string",
+            "anyOf": [
+              {
+                "enum": [
+                  "beginTime",
+                  "endTime",
+                  "middleTime"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "noPrecipitation": {
+        "type": "boolean"
+      },
+      "precipitationType": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "hoarFrost",
+              "dew",
+              "rime",
+              "liquidNotFreezing",
+              "unknown",
+              "noPrecipitation",
+              "snowPellets",
+              "glaze",
+              "wetSnow",
+              "liquidFreezing",
+              "sleet",
+              "diamondDust",
+              "drizzle",
+              "snowGrains",
+              "icePellets",
+              "hardRime",
+              "softRime",
+              "smallHail",
+              "iceCrystals",
+              "hail",
+              "freezingRain",
+              "whiteDev",
+              "rain",
+              "clearIce",
+              "solid",
+              "snow"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "precipitationIntensityGrade": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "severe",
+              "violent",
+              "noPhenomena",
+              "light",
+              "heavy",
+              "moderate"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "precipitationIntensity": {
+        "type": "number"
+      },
+      "depositionDepth": {
+        "type": "number"
+      },
+      "windMeasurementHeight": {
+        "type": "number"
+      },
+      "windSpeed": {
+        "type": "number"
+      },
+      "maximumWindSpeed": {
+        "type": "number"
+      },
+      "windDirectionBearing": {
+        "type": "number"
+      },
+      "maximumWindDirectionBearing": {
+        "type": "number"
+      },
+      "windDirectionCompass": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "westNorthWest",
+              "south",
+              "northNorthEast",
+              "east",
+              "eastNorthEast",
+              "eastSouthEast",
+              "northEast",
+              "northNorthWest",
+              "northWest",
+              "southEast",
+              "southSouthEast",
+              "southSouthWest",
+              "southWest",
+              "west",
+              "westSouthWest",
+              "north"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "maximumWindDirectionCompass": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "westNorthWest",
+              "south",
+              "northNorthEast",
+              "east",
+              "eastNorthEast",
+              "eastSouthEast",
+              "northEast",
+              "northNorthWest",
+              "northWest",
+              "southEast",
+              "southSouthEast",
+              "southSouthWest",
+              "southWest",
+              "west",
+              "westSouthWest",
+              "north"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "airTemperature": {
+        "type": "number"
+      },
+      "dewPointTemperature": {
+        "type": "number"
+      },
+      "maximumTemperature": {
+        "type": "number"
+      },
+      "minimumTemperature": {
+        "type": "number"
+      },
+      "relativeHumidity": {
+        "type": "number"
+      },
+      "pressure": {
+        "type": "number"
+      },
+      "itinerary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "lengthAffected": {
+            "type": "number"
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "isLastPoint": {
+                  "type": "boolean"
+                },
+                "directionByDegrees": {
+                  "type": "number"
+                },
+                "directionByCompass": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

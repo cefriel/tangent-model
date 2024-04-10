@@ -1,0 +1,360 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "creationTime": {
+        "type": "string"
+      },
+      "source": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "automobileClubPatrol",
+              "cameraObservation",
+              "freightVehicleOperator",
+              "inductionLoopMonitoringStation",
+              "infraredMonitoringStation",
+              "microwaveMonitoringStation",
+              "microwavedMonitoringStation",
+              "mobileTelephoneCaller",
+              "nonPoliceEmergencyServicePatrol",
+              "nonPoliceEmergencyServicesPatrol",
+              "otherInformation",
+              "otherOfficialVehicle",
+              "policePatrol",
+              "privateBreakdownService",
+              "publicAndPrivateUtilities",
+              "registeredMotoristObserver",
+              "registeredMobileObserver",
+              "roadAuthorities",
+              "roadOperatorPatrol",
+              "roadsideTelephoneCaller",
+              "spotterAircraft",
+              "trafficMonitoringStation",
+              "transitOperator",
+              "vehicleProbeMeasurement",
+              "videoProcessingMonitoringStation"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "verification": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "unknown",
+              "unverified",
+              "verified",
+              "verifiedAsDuplicate"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "validityPeriod": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string"
+          },
+          "endTime": {
+            "type": "string"
+          }
+        }
+      },
+      "planned": {
+        "type": "boolean"
+      },
+      "alertCause": {
+        "type": "string",
+        "anyOf": [
+          {
+            "enum": [
+              "unknown",
+              "securityAlert",
+              "emergencyServicesCall",
+              "policeActivity",
+              "policeOrder",
+              "fire",
+              "cableFire",
+              "smokeDetectedOnVehicle",
+              "fireAtStation",
+              "fireRun",
+              "fireBrigadeOrder",
+              "explosion",
+              "explosionHazard",
+              "bombDisposal",
+              "emergencyMedicalServices",
+              "emergencyBrake",
+              "vandalism",
+              "cableTheft",
+              "signalPassedAtDanger",
+              "stationOverrun",
+              "passengersBlockingDoors",
+              "defectiveSecuritySystem",
+              "overcrowded",
+              "borderControl",
+              "unattendedBag",
+              "telephonedThreat",
+              "suspectVehicle",
+              "evacuation",
+              "terroristIncident",
+              "publicDisturbance",
+              "technicalProblem",
+              "vehicleFailure",
+              "serviceDisruption",
+              "doorFailure",
+              "lightingFailure",
+              "pointsProblem",
+              "pointsFailure",
+              "signalProblem",
+              "signalFailure",
+              "overheadWireFailure",
+              "levelCrossingFailure",
+              "trafficManagementSystemFailure",
+              "engineFailure",
+              "breakDown",
+              "repairWork",
+              "constructionWork",
+              "maintenanceWork",
+              "powerProblem",
+              "trackCircuitProblem",
+              "swingBridgeFailure",
+              "escalatorFailure",
+              "liftFailure",
+              "gangwayProblem",
+              "defectiveVehicle",
+              "brokenRail",
+              "poorRailConditions",
+              "deicingWork",
+              "wheelProblem",
+              "routeBlockage",
+              "congestion",
+              "heavyTraffic",
+              "routeDiversion",
+              "roadworks",
+              "unscheduledConstructionWork",
+              "levelCrossingIncident",
+              "sewerageMaintenance",
+              "roadClosed",
+              "roadwayDamage",
+              "bridgeDamage",
+              "personOnTheLine",
+              "objectOnTheLine",
+              "vehicleOnTheLine",
+              "animalOnTheLine",
+              "fallenTreeOnTheLine",
+              "vegetation",
+              "speedRestrictions",
+              "precedingVehicle",
+              "accident",
+              "nearMiss",
+              "personHitByVehicle",
+              "vehicleStruckObject",
+              "vehicleStruckAnimal",
+              "derailment",
+              "collision",
+              "levelCrossingAccident",
+              "poorWeather",
+              "fog",
+              "heavySnowFall",
+              "heavyRain",
+              "strongWinds",
+              "ice",
+              "hail",
+              "highTemperatures",
+              "flooding",
+              "lowWaterLevel",
+              "riskOfFlooding",
+              "highWaterLevel",
+              "fallenLeaves",
+              "fallenTree",
+              "landslide",
+              "riskOfLandslide",
+              "driftingSnow",
+              "blizzardConditions",
+              "stormDamage",
+              "lightningStrike",
+              "roughSea",
+              "highTide",
+              "lowTide",
+              "iceDrift",
+              "avalanches",
+              "riskOfAvalanches",
+              "flashFloods",
+              "mudslide",
+              "rockfalls",
+              "subsidence",
+              "earthquakeDamage",
+              "grassFire",
+              "wildlandFire",
+              "iceOnRailway",
+              "iceOnCarriages",
+              "specialEvent",
+              "procession",
+              "demonstration",
+              "industrialAction",
+              "staffSickness",
+              "staffAbsence",
+              "operatorCeasedTrading",
+              "previousDisturbances",
+              "vehicleBlockingTrack",
+              "foreignDisturbances",
+              "awaitingShuttle",
+              "changeInCarriages",
+              "trainCoupling",
+              "boardingDelay",
+              "awaitingApproach",
+              "overtaking",
+              "provisionDelay",
+              "miscellaneous",
+              "undefinedAlertCause",
+              "incident",
+              "safetyViolation",
+              "trainDoor",
+              "altercation",
+              "illVehicleOccupants",
+              "serviceFailure",
+              "bombExplosion",
+              "fireBrigadeSafetyChecks",
+              "civilEmergency",
+              "airRaid",
+              "sabotage",
+              "bombAlert",
+              "attack",
+              "gunfireOnRoadway",
+              "securityIncident",
+              "linesideFire",
+              "passengerAction",
+              "staffAssault",
+              "railwayCrime",
+              "assault",
+              "theft",
+              "fatality",
+              "personUnderTrain",
+              "personHitByTrain",
+              "personIllOnVehicle",
+              "emergencyServices",
+              "insufficientDemand",
+              "leaderBoardFailure",
+              "serviceIndicatorFailure",
+              "operatorSuspended",
+              "problemsAtBorderPost",
+              "problemsAtCustomsPost",
+              "trainStruckAnimal",
+              "trainStruckObject",
+              "roadMaintenance",
+              "asphalting",
+              "paving",
+              "march",
+              "filterBlockade",
+              "sightseersObstructingAccess",
+              "holiday",
+              "bridgeStrike",
+              "viaductFailure",
+              "overheadObstruction",
+              "undefinedProblem",
+              "logisticProblems",
+              "problemsOnLocalRoad",
+              "staffInjury",
+              "contractorStaffInjury",
+              "staffInWrongPlace",
+              "staffShortage",
+              "unofficialIndustrialAction",
+              "workToRule",
+              "undefinedPersonnelProblem",
+              "trainWarningSystemProblem",
+              "signalAndSwitchFailure",
+              "tractionFailure",
+              "defectiveTrain",
+              "wheelImpactLoad",
+              "lackOfOperationalStock",
+              "defectiveFireAlarmEquipment",
+              "defectivePlatformEdgeDoors",
+              "defectiveCctv",
+              "defectivePublicAnnouncementSystem",
+              "ticketingSystemNotAvailable",
+              "emergencyEngineeringWork",
+              "lateFinishToEngineeringWork",
+              "fuelProblem",
+              "closedForMaintenance",
+              "fuelShortage",
+              "slipperyTrack",
+              "luggageCarouselProblem",
+              "undefinedEquipmentProblem",
+              "stormConditions",
+              "tidalRestrictions",
+              "slipperiness",
+              "glazedFrost",
+              "frozen",
+              "sleet",
+              "waterlogged",
+              "sewerOverflow",
+              "undefinedEnvironmentalProblem",
+              "fireAtTheStation",
+              "breakdown",
+              "levelCrossingBlocked",
+              "heavySnowfall",
+              "waitingForTransferPassengers",
+              "awaitingOncomingVehicle"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "summary": {
+        "type": "string"
+      },
+      "affects": {
+        "type": "object",
+        "properties": {
+          "operators": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "stopPoints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "vehicleJourneys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
